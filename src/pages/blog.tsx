@@ -1,35 +1,32 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import { PageProps, graphql } from "gatsby";
+import PostPreview from "../components/postpreview";
 
-type BlogPageData = {
-  allFile: {
-    nodes: BlogNode[];
-  };
-};
-
-type BlogNode = {
-  name: string;
-};
-
-const BlogPage: React.FC<PageProps<BlogPageData>> = ({ data }) => {
+const BlogPage: React.FC<PageProps<Queries.BlogPageQuery>> = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
-      <p>My cool posts will go in here</p>
-      <ul>
-        {data.allFile.nodes.map((node: BlogNode) => (
-          <li key={node.name}>{node.name}</li>
-        ))}
-      </ul>
+      {data.allMdx.nodes.map((node) => (
+        <PostPreview
+          title={node?.frontmatter?.title}
+          date={node.frontmatter?.date}
+          excerpt={node.excerpt}
+        />
+      ))}
     </Layout>
   );
 };
 
 export const query = graphql`
-  query {
-    allFile {
+  query BlogPage {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        name
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+        }
+        id
+        excerpt
       }
     }
   }
