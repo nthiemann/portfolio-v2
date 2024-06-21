@@ -2,6 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { PageProps, graphql } from "gatsby";
 import PostPreview from "../components/postpreview";
+import Seo from "../components/seo";
 
 const BlogPage: React.FC<PageProps<Queries.BlogPageQuery>> = ({ data }) => {
   return (
@@ -36,3 +37,5 @@ export const query = graphql`
 `;
 
 export default BlogPage;
+
+export const Head = () => <Seo title="Blog Posts" />;

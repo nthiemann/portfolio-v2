@@ -1,6 +1,7 @@
 import * as React from "react";
 import Layout from "../../components/layout";
-import { graphql, PageProps } from "gatsby";
+import { graphql, HeadFC, PageProps } from "gatsby";
+import Seo from "../../components/seo";
 
 const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
   data,
@@ -25,3 +26,7 @@ export const query = graphql`
   }
 `;
 export default BlogPost;
+
+export const Head: HeadFC<Queries.BlogPostQuery> = ({ data }) => (
+  <Seo title={data?.mdx?.frontmatter?.title ?? undefined} />
+);

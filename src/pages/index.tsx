@@ -14,6 +14,7 @@ import {
   listStyles,
   paragraphStyles,
 } from "../styles";
+import Seo from "../components/seo";
 
 const docLinks = [
   {
@@ -130,4 +131,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head = () => <Seo title="Home" />;
