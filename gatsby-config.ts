@@ -18,7 +18,6 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-mdx",
-    "gatsby-plugin-typegen",
   ],
 };
 
