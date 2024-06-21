@@ -1,19 +1,23 @@
 import * as React from "react";
 import Navbar from "./navbar";
-import { pageStyles } from "../styles";
-import { container, heading } from "./layout.module.css";
+import { container, background, heading } from "./layout.module.css";
+import Typography from "./typography";
 
 type LayoutProps = {
   children: React.ReactNode;
-  pageTitle: string;
+  pageTitle?: string;
 };
 
 const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
   return (
-    <div className={container}>
+    <div className={background}>
       <Navbar />
-      <main style={pageStyles}>
-        <h1 className={heading}>{pageTitle}</h1>
+      <main className={container}>
+        {pageTitle && (
+          <Typography className={heading} variant="h1">
+            {pageTitle}
+          </Typography>
+        )}
         {children}
       </main>
     </div>

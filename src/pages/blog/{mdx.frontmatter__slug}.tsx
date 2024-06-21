@@ -1,6 +1,9 @@
 import * as React from "react";
 import Layout from "../../components/layout";
-import { graphql, PageProps } from "gatsby";
+import { graphql, HeadFC, PageProps } from "gatsby";
+import Seo from "../../components/seo";
+import Typography from "../../components/typography";
+import BlogBodyEl from "../../components/blogbodyel";
 
 const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
   data,
@@ -8,7 +11,9 @@ const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
 }) => {
   return (
     <Layout pageTitle="Super Cool Blog Posts">
-      {data?.mdx?.frontmatter?.date && <p>{data.mdx.frontmatter.date}</p>}
+      {data?.mdx?.frontmatter?.date && (
+        <Typography>{data.mdx.frontmatter.date}</Typography>
+      )}
       {children}
     </Layout>
   );
@@ -25,3 +30,10 @@ export const query = graphql`
   }
 `;
 export default BlogPost;
+
+export const Head: HeadFC<Queries.BlogPostQuery> = ({ data }) => (
+  <>
+    <Seo title={data?.mdx?.frontmatter?.title ?? undefined} />
+    <BlogBodyEl />
+  </>
+);

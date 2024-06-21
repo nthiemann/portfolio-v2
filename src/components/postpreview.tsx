@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./card";
 import { navigate } from "gatsby";
-import { cardwrapper } from "./postpreview.module.css";
+import Typography from "./typography";
 
 type PostPreviewProps = {
   title?: string | null;
@@ -21,15 +21,14 @@ const PostPreview: React.FC<PostPreviewProps> = ({
   };
 
   return (
-    <div className={cardwrapper}>
-      <Card onClick={handleClick}>
-        <article>
-          {title && <h2>{title}</h2>}
-          {date && <p>{date}</p>}
-          {excerpt && <p>{excerpt}</p>}
-        </article>
-      </Card>
-    </div>
+    <Card onClick={handleClick}>
+      <article>
+        {title && <Typography variant="h2">{title}</Typography>}
+        {date && <Typography variant="p">{date}</Typography>}
+        {excerpt && <Typography variant="p">{excerpt}</Typography>}
+      </article>
+    </Card>
+    // </div>
   );
 };
 
