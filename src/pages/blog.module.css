@@ -1,0 +1,14 @@
+:root {
+  --text-main: #f2f6fa;
+  --background: #070913;
+}
+
+.background {
+  background-color: var(--background);
+}
+
+.cardcontainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2;
+}

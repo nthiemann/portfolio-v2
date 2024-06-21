@@ -1,0 +1,14 @@
+:root {
+  --text-light-main: #f2f6fa;
+  --text-dark-main: #0000;
+}
+
+.light {
+  color: var(--text-light-main);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.dark {
+  color: var(--text-dark-main);
+  font-family: "JetBrains Mono", monospace;
+}

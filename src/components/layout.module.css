@@ -1,52 +1,17 @@
+:root {
+  --text-main: #f2f6fa;
+  --background: #070913;
+}
+
 .container {
   margin: auto;
-  max-width: 500px;
-  font-family: sans-serif;
+  max-width: 60%;
 }
 
 .heading {
   color: rebeccapurple;
 }
 
-.gradient-background {
-  background: linear-gradient(268deg, #223da7, #b92d9b);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 9s ease infinite;
-  -moz-animation: AnimationName 9s ease infinite;
-  animation: AnimationName 9s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 22% 0%;
-  }
-  50% {
-    background-position: 79% 100%;
-  }
-  100% {
-    background-position: 22% 0%;
-  }
-}
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 22% 0%;
-  }
-  50% {
-    background-position: 79% 100%;
-  }
-  100% {
-    background-position: 22% 0%;
-  }
-}
-@keyframes AnimationName {
-  0% {
-    background-position: 22% 0%;
-  }
-  50% {
-    background-position: 79% 100%;
-  }
-  100% {
-    background-position: 22% 0%;
-  }
+.page {
+  padding: 96;
 }
