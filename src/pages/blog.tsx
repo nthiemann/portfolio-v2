@@ -8,9 +8,11 @@ const BlogPage: React.FC<PageProps<Queries.BlogPageQuery>> = ({ data }) => {
     <Layout pageTitle="My Blog Posts">
       {data.allMdx.nodes.map((node) => (
         <PostPreview
-          title={node?.frontmatter?.title}
+          key={node.id}
+          title={node.frontmatter?.title}
           date={node.frontmatter?.date}
           excerpt={node.excerpt}
+          url={`/blog/${node.frontmatter?.slug}`}
         />
       ))}
     </Layout>
@@ -24,6 +26,7 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          slug
         }
         id
         excerpt
