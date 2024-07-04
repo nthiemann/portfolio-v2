@@ -12,3 +12,10 @@
   flex-direction: row;
   column-gap: 2;
 }
+
+.empty-state {
+  display: flex;
+  margin-top: 35vh;
+  justify-content: center;
+  align-items: center;
+}

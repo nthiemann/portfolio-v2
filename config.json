@@ -1,0 +1,14 @@
+{
+  "feature_toggles": {
+    "blog": true,
+    "blog_posts": false
+  },
+  "github_link": "https://github.com/nthiemann",
+  "skills": {
+    "HTML": 8,
+    "CSS": 5,
+    "Python": 7,
+    "TypeScript": 8
+  },
+  "max_skill_rank": 10
+}

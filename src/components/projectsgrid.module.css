@@ -1,0 +1,9 @@
+.empty-state {
+  border: 1px dotted #f2f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
