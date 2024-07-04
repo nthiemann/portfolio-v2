@@ -10,7 +10,7 @@ const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
   children,
 }) => {
   return (
-    <Layout pageTitle="Super Cool Blog Posts">
+    <Layout pageTitle={data?.mdx?.frontmatter?.title ?? undefined}>
       {data?.mdx?.frontmatter?.date && (
         <Typography>{data.mdx.frontmatter.date}</Typography>
       )}

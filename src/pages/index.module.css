@@ -3,19 +3,9 @@
   --background: #070913;
 }
 
-/* GRADIENT */
-
 .body {
-  background-image: linear-gradient(
-    to right top,
-    #1b2381,
-    #503fd0,
-    #4d29a4,
-    #42157b,
-    #330355
-  );
-  background-size: 400% 400%;
   background-color: var(--background);
+  margin: 0;
 }
 
 * {
@@ -28,4 +18,49 @@
   font-optical-sizing: auto;
   font-weight: 20;
   font-style: normal;
+}
+
+/** Page sections **/
+.header-section {
+  background: linear-gradient(
+    to right top,
+    #1b2381,
+    #503fd0,
+    #4d29a4,
+    #42157b,
+    #330355
+  );
+  background-size: 100% 100%;
+  height: 300px;
+  align-items: center;
+  padding-top: 50px;
+  animation: fade 0.7s ease-in;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+}
+
+.section1 {
+  padding-top: 50px;
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.container {
+  margin: auto;
+  max-width: 400px;
+}
+
+.transition {
+  margin-top: -15px;
+  /* z-index: 50; */
+  /* background-image: linear-gradient(rgb(111, 0, 255), var(--background)); */
+  height: 30px;
+  /* filter: blur(5px); Apply blur effect */
+  backdrop-filter: blur(5px);
 }

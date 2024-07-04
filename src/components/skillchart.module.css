@@ -1,0 +1,27 @@
+.skill-name {
+  margin-right: 25px;
+  animation: fade 0.9s ease-in;
+}
+
+.point-square {
+  height: 16px;
+  width: 16px;
+  margin: 5px;
+  background-color: lime;
+  animation: fade 1.1s ease-in;
+}
+
+.point-square-empty {
+  height: 16px;
+  width: 16px;
+  margin: 5px;
+  border: 1px lime dotted;
+  transition: opacity 0.5s;
+  animation: fade 1.3s ease-in;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+}

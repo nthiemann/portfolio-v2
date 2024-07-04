@@ -1,7 +1,11 @@
 import { Link } from "gatsby";
 import * as React from "react";
-import { navLinks, navLinkItem, navLinkText } from "./navbar.module.css";
+import { navLinks, navLinkItem, gitIcon } from "./navbar.module.css";
 import Typography from "./typography";
+import GithubIcon from "../assets/github-mark-white.svg";
+import config from "../../config.json";
+
+const GITHUB_LINK = config.github_link;
 
 const Navbar: React.FC = () => {
   return (
@@ -16,6 +20,11 @@ const Navbar: React.FC = () => {
           <Link to="/blog">
             <Typography>Blog</Typography>
           </Link>
+        </li>
+        <li>
+          <a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
+            {/* <GithubIcon className={gitIcon}></GithubIcon> */}
+          </a>
         </li>
       </ul>
     </nav>

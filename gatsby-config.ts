@@ -34,6 +34,31 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/assets/`, // See below to configure properly
+        },
+      },
+    },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: `gatsby-remark-embed-snippet`,
+    //         options: {
+    //           directory: `${__dirname}/blog/assets/snippets/`,
+    //         },
+    //       },
+    //       {
+    //         resolve: `gatsby-remark-prismjs`,
+    //         options: {},
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 };
 
