@@ -1,9 +1,9 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import { navLinks, navLinkItem, gitIcon } from "./navbar.module.css";
-import Typography from "./typography";
+import Typography from "../Typography/typography";
 import GithubIcon from "../assets/github-mark-white.svg";
-import config from "../../config.json";
+import config from "../../../config.json";
 
 const GITHUB_LINK = config.github_link;
 

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import config from "../../config.json";
+import config from "../../../config.json";
 import * as styles from "./skillchart.module.css";
-import Typography from "./typography";
+import Typography from "../Typography/typography";
+import { Guid } from "guid-typescript";
 
 interface Skills {
   [name: string]: number;
@@ -27,14 +28,14 @@ const SkillChart: React.FC = () => {
         .toSorted((a, b) => b[1] - a[1])
         .map(([key, value]) => {
           return (
-            <tr>
+            <tr key={key}>
               <td>
                 <div className={styles.skillName}>
                   <Typography>{key}</Typography>
                 </div>
               </td>
               {Array.from({ length: value }).map((_, index) => (
-                <td key={index}>
+                <td key={Guid.create().toString()}>
                   <div className={styles.pointSquare}></div>
                 </td>
               ))}
@@ -49,5 +50,4 @@ const SkillChart: React.FC = () => {
     </table>
   );
 };
-Object.entries;
 export default SkillChart;

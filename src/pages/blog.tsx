@@ -1,11 +1,11 @@
 import * as React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout/layout";
 import { HeadFC, PageProps, graphql } from "gatsby";
-import PostPreview from "../components/postpreview";
-import Seo from "../components/seo";
+import PostPreview from "../components/PostPreview/postpreview";
+import Seo from "../components/Seo/seo";
 import * as styles from "./blog.module.css";
 import { isFeatureToggled } from "../utils";
-import Typography from "../components/typography";
+import Typography from "../components/Typography/typography";
 
 const TITLE = "Blog Posts";
 

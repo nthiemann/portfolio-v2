@@ -1,9 +1,9 @@
 import * as React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout/layout";
 import { graphql, HeadFC, PageProps } from "gatsby";
-import Seo from "../../components/seo";
-import Typography from "../../components/typography";
-import BlogBodyEl from "../../components/blogbodyel";
+import Seo from "../../components/Seo/seo";
+import Typography from "../../components/Typography/typography";
+import BlogBodyEl from "../../components/BlogBodyEl/blogbodyel";
 
 const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
   data,

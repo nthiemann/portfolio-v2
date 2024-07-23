@@ -1,12 +1,13 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import Seo from "../components/Seo/seo";
 import * as styles from "./index.module.css";
-import Typography from "../components/typography";
-import Navbar from "../components/navbar";
-import SkillChart from "../components/skillchart";
-import ProjectsGrid from "../components/projectsgrid";
+import Typography from "../components/Typography/typography";
+import Navbar from "../components/Navbar/navbar";
+import SkillChart from "../components/SkillChart/skillchart";
+import ProjectsGrid from "../components/ProjectsGrid/projectsgrid";
+import TechBucket from "../components/techbucket/techbucket";
+import { isFeatureToggled } from "../utils";
 const TITLE = "Home";
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -24,6 +25,11 @@ const IndexPage: React.FC<PageProps> = () => {
         <SkillChart />
         <ProjectsGrid />
       </div>
+      {isFeatureToggled("tech_bucket") && (
+        <div className={styles.section1}>
+          <TechBucket />
+        </div>
+      )}
     </>
   );
 };

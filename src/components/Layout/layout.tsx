@@ -1,7 +1,7 @@
 import * as React from "react";
-import Navbar from "./navbar";
+import Navbar from "../Navbar/navbar";
 import { container, heading } from "./layout.module.css";
-import Typography from "./typography";
+import Typography from "../Typography/typography";
 import * as CSS from "csstype";
 
 type LayoutProps = {

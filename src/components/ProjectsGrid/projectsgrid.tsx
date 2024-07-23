@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./projectsgrid.module.css";
-import Typography from "./typography";
+import Typography from "../Typography/typography";
 /**
  * @description A showcase of projects I have worked on
  */

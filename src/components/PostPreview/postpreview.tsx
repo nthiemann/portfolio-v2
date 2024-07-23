@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./card";
+import Card from "../Card/card";
 import { navigate } from "gatsby";
-import Typography from "./typography";
+import Typography from "../Typography/typography";
 
 type PostPreviewProps = {
   title?: string | null;

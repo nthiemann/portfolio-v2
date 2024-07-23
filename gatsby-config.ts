@@ -1,9 +1,10 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  pathPrefix: "portfolio-v2",
   siteMetadata: {
     title: `portfolio-v2`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://nthiemann.github.io/portfolio-v2/`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -42,6 +43,7 @@ const config: GatsbyConfig = {
         },
       },
     },
+
     // {
     //   resolve: `gatsby-transformer-remark`,
     //   options: {
