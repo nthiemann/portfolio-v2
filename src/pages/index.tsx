@@ -14,10 +14,14 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <div className={styles.headerSection}>
-        <Navbar />
-        <div className={styles.container}>
-          <Typography variant="h1">Nicholas Thiemann</Typography>
-          <Typography variant="h2">Web Developer</Typography>
+        <div className={styles.navContainer}>
+          <Navbar />
+        </div>
+        <div className={styles.nameContainer}>
+          <div className={styles.nameBlock}>
+            <Typography variant="h1">Nicholas Thiemann</Typography>
+            <Typography variant="h2">Web Developer</Typography>
+          </div>
         </div>
       </div>
       <div className={styles.transition} />

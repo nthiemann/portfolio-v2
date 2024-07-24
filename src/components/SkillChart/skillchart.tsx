@@ -24,29 +24,31 @@ const SkillChart: React.FC = () => {
     <></>
   ) : (
     <table>
-      {Object.entries(SKILLS)
-        .toSorted((a, b) => b[1] - a[1])
-        .map(([key, value]) => {
-          return (
-            <tr key={key}>
-              <td>
-                <div className={styles.skillName}>
-                  <Typography>{key}</Typography>
-                </div>
-              </td>
-              {Array.from({ length: value }).map((_, index) => (
-                <td key={Guid.create().toString()}>
-                  <div className={styles.pointSquare}></div>
+      <tbody>
+        {Object.entries(SKILLS)
+          .toSorted((a, b) => b[1] - a[1])
+          .map(([key, value]) => {
+            return (
+              <tr key={key}>
+                <td>
+                  <div className={styles.skillName}>
+                    <Typography>{key}</Typography>
+                  </div>
                 </td>
-              ))}
-              {Array.from({ length: MAX_RANK - value }).map((_, index) => (
-                <td key={value + index}>
-                  <div className={styles.pointSquareEmpty}></div>
-                </td>
-              ))}
-            </tr>
-          );
-        })}
+                {Array.from({ length: value }).map((_, index) => (
+                  <td key={Guid.create().toString()}>
+                    <div className={styles.pointSquare}></div>
+                  </td>
+                ))}
+                {Array.from({ length: MAX_RANK - value }).map((_, index) => (
+                  <td key={value + index}>
+                    <div className={styles.pointSquareEmpty}></div>
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
+      </tbody>
     </table>
   );
 };

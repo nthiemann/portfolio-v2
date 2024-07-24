@@ -20,6 +20,22 @@
   animation: fade 1.3s ease-in;
 }
 
+/* Use a media query to add a breakpoint at 400px: */
+@media screen and (max-width: 500px) {
+  .point-square,
+  .point-square-empty {
+    margin: 0px;
+  }
+
+  .skill-name {
+    margin-right: 10px;
+  }
+  td {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @keyframes fade {
   0% {
     opacity: 0;

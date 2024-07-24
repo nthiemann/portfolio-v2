@@ -1,6 +1,7 @@
 :root {
   --text-main: #f2f6fa;
   --background: #070913;
+  --mobile-break: 500;
 }
 
 .body {
@@ -31,10 +32,8 @@
     #330355
   );
   background-size: 100% 100%;
-  height: 300px;
-  align-items: center;
-  padding-top: 50px;
   animation: fade 0.7s ease-in;
+  min-height: 30vh;
 }
 @keyframes fade {
   0% {
@@ -42,25 +41,41 @@
   }
 }
 
-.section1 {
-  padding-top: 50px;
-  max-width: 80%;
-  margin: auto;
+.name-container {
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 25px;
+  padding-top: 0px;
 }
 
-.container {
-  margin: auto;
-  max-width: 400px;
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-height: 40px;
+}
+
+.name-block {
+  margin: 20px;
 }
 
 .transition {
   margin-top: -15px;
-  /* z-index: 50; */
-  /* background-image: linear-gradient(rgb(111, 0, 255), var(--background)); */
   height: 30px;
-  /* filter: blur(5px); Apply blur effect */
   backdrop-filter: blur(5px);
+}
+
+.section1 {
+  max-width: 80%;
+  padding-top: 50px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  left: 50%;
+  right: 50%;
+  margin: 0 auto;
 }
