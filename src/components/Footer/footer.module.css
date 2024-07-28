@@ -1,0 +1,15 @@
+.footer {
+  width: 100vw;
+  min-height: 50px;
+  margin-top: 100px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.footer p,
+a {
+  color: #606060;
+}

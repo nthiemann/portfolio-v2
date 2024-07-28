@@ -8,6 +8,8 @@ import SkillChart from "../components/SkillChart/skillchart";
 import ProjectsGrid from "../components/ProjectsGrid/projectsgrid";
 import TechBucket from "../components/techbucket/techbucket";
 import { isFeatureToggled } from "../utils";
+import Footer from "../components/Footer/footer";
+import AboutMe from "../content/about-me.mdx";
 const TITLE = "Home";
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -27,13 +29,16 @@ const IndexPage: React.FC<PageProps> = () => {
       <div className={styles.transition} />
       <div className={styles.section1}>
         <SkillChart />
-        <ProjectsGrid />
+        <div className={styles.about}>
+          <AboutMe />
+        </div>
       </div>
       {isFeatureToggled("tech_bucket") && (
         <div className={styles.section1}>
           <TechBucket />
         </div>
       )}
+      <Footer />
     </>
   );
 };

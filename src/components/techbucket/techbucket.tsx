@@ -1,7 +1,33 @@
 import React, { useEffect, useRef } from "react";
 import Matter from "matter-js";
+import * as ICONS from "../../assets/icons/index";
+import * as styles from "./techbucket.module.css";
+import Tooltip from "../Tooltip/tooltip";
 
-export const TechBucket = () => {
+const iconMap = {
+  "Amazon Web Services": ICONS.AwsGradientIcon,
+  JavaScript: ICONS.JavascriptGradientIcon,
+  Python: ICONS.PythonGradientIcon,
+  React: ICONS.ReactGradientIcon,
+  HTML: ICONS.HtmlGradientIcon,
+  CSS: ICONS.CssGradientIcon,
+  PostgreSQL: ICONS.PostgresIcon,
+  Git: ICONS.GitGradientIcon,
+  Docker: ICONS.DockerGradientIcon,
+  Gatsby: ICONS.GatsbyIcon,
+  Firebase: ICONS.FirebaseIcon,
+  Terraform: ICONS.TerraformGradientIcon,
+  GraphQL: ICONS.GraphQlIcon,
+  Django: ICONS.DjangoGradientIcon,
+  SAP: ICONS.SapGradientIcon,
+  MySQL: ICONS.MysqlGradientIcon,
+  "Raspberry Pi": ICONS.RaspberryPiGradientIcon,
+  "Android Studio": ICONS.AndroidStudioGradientIcon,
+  Jira: ICONS.JiraGradientIcon,
+  Unity: ICONS.UnityGradientIcon,
+};
+
+const TechBucketWip = () => {
   const boxRef = useRef(null);
   const canvasRef = useRef(null);
 
@@ -55,6 +81,18 @@ export const TechBucket = () => {
       }}
     >
       <canvas ref={canvasRef} />
+    </div>
+  );
+};
+
+const TechBucket = () => {
+  return (
+    <div className={styles.icon}>
+      {Object.entries(iconMap).map(([key, Value], i) => (
+        <Tooltip key={key} text={key}>
+          <Value />
+        </Tooltip>
+      ))}
     </div>
   );
 };

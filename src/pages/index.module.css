@@ -79,3 +79,8 @@
   right: 50%;
   margin: 0 auto;
 }
+
+.about {
+  max-width: 500px;
+  animation: fade 1.5s ease-in;
+}

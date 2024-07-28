@@ -18,6 +18,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/blog`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
     "gatsby-plugin-mdx",
     {
       resolve: `gatsby-omni-font-loader`,
