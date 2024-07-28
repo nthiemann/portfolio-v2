@@ -6,10 +6,22 @@
   },
   "github_link": "https://github.com/nthiemann",
   "skills": {
-    "HTML": 8,
-    "CSS": 5,
-    "Python": 7,
-    "TypeScript": 8
+    "HTML": {
+      "level": 8,
+      "description": "Strong foundation for all things frontend"
+    },
+    "CSS": {
+      "level": 5,
+      "description": "I know the basics here - nothing too fancy"
+    },
+    "Python": {
+      "level": 7,
+      "description": "Mostly used with backend frameworks like Django and FastAPI"
+    },
+    "TypeScript": {
+      "level": 8,
+      "description": "Extensively used with React & strong understanding of type system"
+    }
   },
   "max_skill_rank": 10
 }

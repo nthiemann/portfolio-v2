@@ -3,9 +3,13 @@ import config from "../../../config.json";
 import * as styles from "./skillchart.module.css";
 import Typography from "../Typography/typography";
 import { Guid } from "guid-typescript";
+import Tooltip from "../Tooltip/tooltip";
 
 interface Skills {
-  [name: string]: number;
+  [name: string]: {
+    level: number;
+    description: string;
+  };
 }
 
 const SKILLS: Skills = config.skills;
@@ -26,7 +30,7 @@ const SkillChart: React.FC = () => {
     <table>
       <tbody>
         {Object.entries(SKILLS)
-          .toSorted((a, b) => b[1] - a[1])
+          .toSorted((a, b) => b[1].level - a[1].level)
           .map(([key, value]) => {
             return (
               <tr key={key}>
@@ -35,16 +39,20 @@ const SkillChart: React.FC = () => {
                     <Typography>{key}</Typography>
                   </div>
                 </td>
-                {Array.from({ length: value }).map((_, index) => (
-                  <td key={Guid.create().toString()}>
-                    <div className={styles.pointSquare}></div>
-                  </td>
-                ))}
-                {Array.from({ length: MAX_RANK - value }).map((_, index) => (
-                  <td key={value + index}>
-                    <div className={styles.pointSquareEmpty}></div>
-                  </td>
-                ))}
+                <Tooltip text={value.description}>
+                  {Array.from({ length: value.level }).map((_, index) => (
+                    <td key={Guid.create().toString()}>
+                      <div className={styles.pointSquare}></div>
+                    </td>
+                  ))}
+                  {Array.from({ length: MAX_RANK - value.level }).map(
+                    (_, index) => (
+                      <td key={value.level + index}>
+                        <div className={styles.pointSquareEmpty}></div>
+                      </td>
+                    )
+                  )}
+                </Tooltip>
               </tr>
             );
           })}
