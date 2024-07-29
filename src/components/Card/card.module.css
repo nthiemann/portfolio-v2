@@ -8,6 +8,7 @@
   min-width: 100% / 3;
   border: 2px dotted purple;
   border-radius: 5px; /* 5px rounded corners */
+  background: #0000;
 }
 
 /* On mouse-over, add a deeper shadow */

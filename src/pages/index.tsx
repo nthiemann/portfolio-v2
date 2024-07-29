@@ -38,6 +38,12 @@ const IndexPage: React.FC<PageProps> = () => {
           <TechBucket />
         </div>
       )}
+      {isFeatureToggled("projects_grid") && (
+        <div className={styles.section1}>
+          <Typography variant="h2">Projects</Typography>
+          <ProjectsGrid />
+        </div>
+      )}
       <Footer />
     </>
   );

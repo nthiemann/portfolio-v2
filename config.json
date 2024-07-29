@@ -2,7 +2,8 @@
   "feature_toggles": {
     "blog": true,
     "blog_posts": false,
-    "tech_bucket": true
+    "tech_bucket": true,
+    "projects_grid": true
   },
   "github_link": "https://github.com/nthiemann",
   "skills": {

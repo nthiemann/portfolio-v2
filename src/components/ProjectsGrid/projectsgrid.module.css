@@ -7,3 +7,33 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.card-grid {
+  display: grid;
+}
+
+.card-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Small devices: 2 columns */
+@media (min-width: 700px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Medium devices: 3 columns */
+@media (min-width: 1000px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  align-items: center;
+}
+
+.project-card svg {
+  max-width: 48px;
+  max-height: 48px;
+}
